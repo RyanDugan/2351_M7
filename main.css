@@ -73,3 +73,7 @@ section {
   justify-content: space-around;
   align-items: center;
 }
+
+.player-hand {
+  transform: rotateY(180deg);
+}
