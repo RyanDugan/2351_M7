@@ -19,8 +19,8 @@ const game = () => {
   //play match
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
-    const playerHand = document.querySelector("player-hand");
-    const computerHand = document.querySelector("computer-hand");
+    const playerHand = document.querySelector(".player-hand");
+    const computerHand = document.querySelector(".computer-hand");
 
     //computer's options
     const computerOptions = ["rock", "paper", "scissors"];
@@ -31,6 +31,10 @@ const game = () => {
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
         //here is where we call compareHands
+
+        //update images
+        playerHand.src = `./assets/${this.textContent}.png`;
+        computerHand.src = `./assets/${computerChoice}.png`;
       });
     });
   };
