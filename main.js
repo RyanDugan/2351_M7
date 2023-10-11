@@ -30,7 +30,9 @@ const game = () => {
         //computer's choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
+
         //here is where we call compareHands
+        compareHands(this.textContent, computerChoice);
 
         //update images
         playerHand.src = `./assets/${this.textContent}.png`;
